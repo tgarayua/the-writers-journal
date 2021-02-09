@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
 
     def create
         @blog = Blog.create(blog_params)
-        render json: @toy
+        render json: @blog
     end
 
     def updated
@@ -24,7 +24,7 @@ class BlogsController < ApplicationController
     def destroy
         @blog = Blog.find(params[:id])
         @blog.destroy
-        render json: @toy
+        render json: @blog
     end
 
     private
